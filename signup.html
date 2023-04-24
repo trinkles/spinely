@@ -13,8 +13,7 @@
 		<div class="wrapper">
 			<div class="switchSignLog">
 				<div class="actionBtns">
-					<button class="actionBtn">Sign Up</button>
-					<button class="actionBtn loginBtn">Login</button>
+					<button class="actionBtn">Login</button>
 					<button class="moveBtn">Sign Up</button>
 				</div>
 			</div>
@@ -40,10 +39,10 @@
 			</div>
 		</div>
 		<script>
-			const loginBtn = document.querySelector(".loginBtn");
-
-			loginBtn.addEventListener("click", ()=>{
-				window.location.href = "login.php";
+			const signupBtn = document.querySelector(".actionBtn");
+		
+			signupBtn.addEventListener("click", ()=>{
+				window.location.href = "login.html";
 			})
 		</script>
 	</body>
