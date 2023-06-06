@@ -603,12 +603,17 @@
 
 			/* Toggle between Edit Profile and Device */
 			<div class="report-container">
-				<div class="report-header setting-toggle-box">
-					<h1 class="recent-Articles">Edit Profile</h1>
+				<div class="report-header">
+					<h1 class="recent-Articles">Settings</h1>
+					<select id="toggle-select" onchange="toggleSections()">
+						<option value="0">Edit Profile</option>
+						<option value="1">Device</option>
+					</select>
 				</div>
-				<div class="report-header  setting-toggle-box">
-					<h1 class="recent-Articles">Device</h1>
-					<p>Sit upright or stand with your back on a flat surface and hold position before pressing the calibrate button.</p>
+				<div class="report-header setting-toggle-box">
+				</div>
+				<div class="report-header setting-toggle-box">
+					<p class="caption-calibration">Sit upright or stand with your back on a flat surface and hold position before pressing the calibrate button.</p>
 					<div>
 						<p class="calibration-angles">Cervix angle (upper spine): min, max, avg</p>
 						<p class="calibration-angles">Thoracic angle (middle spine): min, max, avg</p>
@@ -618,7 +623,7 @@
 						<p class="calibration-angles">Left rib: min, max, avg</p>
 						<p class="calibration-angles">Right rib: min, max, avg</p>
 					</div>
-					<div id=arduino-calibrate-div>
+					<div>
 						<button class="calibrate-button">Calibrate</button>
 					</div>
 				</div>
