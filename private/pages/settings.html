@@ -34,27 +34,7 @@
 			--one-use-color: #000000;
 			--two-use-color: #000000;
 			}
-			body {/* New addition, make a responsive version */
-			.setting-toggle-box {
-				display: none;
-			}
-
-			.setting-toggle-box:first-child {
-				display: block;
-			}
-
-			.caption-calibration {
-				text-align: center;
-			}
-
-			.calibration-angles {
-				text-align: center;
-				font-weight: bold;
-			}
-
-			.calibrate-button {
-				margin-top: 10px;
-			}
+			body {
 			background-color: var(--background-color4);
 			max-width: 100%;
 			overflow-x: hidden;
@@ -367,7 +347,7 @@
 			color: white;
 			border-radius: 4px;
 			}
-			
+
 			/* New addition, make a responsive version */
 			.setting-toggle-box {
 				display: none;
@@ -554,6 +534,16 @@
 				}
 				
 		</style>
+		<script>
+			function toggleSections() {
+				var sections = document.getElementsByClassName("setting-toggle-box");
+				for (var i = 0; i < sections.length; i++) {
+					sections[i].style.display = "none";
+				}
+				var currentIndex = document.getElementById("toggle-select").selectedIndex;
+				sections[currentIndex].style.display = "block";
+			}
+		</script>
 </head>
 
 <body>
@@ -600,6 +590,7 @@
 			</nav>
 		</div>
 		<div class="main">
+
 
 			<div class="report-container">
 				<div class="report-header">
