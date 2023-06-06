@@ -14,234 +14,239 @@
 	<link rel="stylesheet"
 		href="responsiveindex.css"> -->
 		<style>
-			@import url(
-			"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-	
-			* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: "Poppins", sans-serif;
-			}
-			:root {
-			--background-color1: #fafaff;
-			--background-color2: #0e5cc9;
-			--background-color3: #ededed;
-			--background-color4: #81c7a9a4;
-			--primary-color: #000000;
-			--secondary-color: #0c007d;
-			--Border-color: #aebef5;
-			--one-use-color: #000000;
-			--two-use-color: #000000;
-			}
-			body {
-			background-color: var(--background-color4);
-			max-width: 100%;
-			overflow-x: hidden;
-			}
-	
-			header {
-			height: 70px;
-			width: 100vw;
-			padding: 0 30px;
-			background-color: var(--background-color1);
-			position: fixed;
-			z-index: 100;
-			box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			}
-	
-			.logo {
-			font-size: 27px;
-			font-weight: 600;
-			color: rgb(25, 47, 114);
-			}
-	
-			.icn {
-			height: 30px;
-			}
-			.menuicn {
-			cursor: pointer;
-			}
-	
-			.searchbar,
-			.message,
-			.logosec {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			}
-	
-			.searchbar2 {
-			display: none;
-			}
-	
-			.logosec {
-			gap: 60px;
-			}
-	
-			.searchbar input {
-			width: 250px;
-			height: 42px;
-			border-radius: 50px 0 0 50px;
-			background-color: var(--background-color3);
-			padding: 0 20px;
-			font-size: 15px;
-			outline: none;
-			border: none;
-			}
-			.searchbtn {
-			width: 50px;
-			height: 42px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 0px 50px 50px 0px;
-			background-color: var(--secondary-color);
-			cursor: pointer;
-			}
-	
-			.message {
-			gap: 40px;
-			position: relative;
-			cursor: pointer;
-			}
-			.circle {
-			height: 7px;
-			width: 7px;
-			position: absolute;
-			background-color: #fa7bb4;
-			border-radius: 50%;
-			left: 19px;
-			top: 8px;
-			}
-			.dp {
-			height: 40px;
-			width: 40px;
-			background-color: #626262;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			overflow: hidden;
-			}
-			.main-container {
-			display: flex;
-			width: 100vw;
-			position: relative;
-			top: 70px;
-			z-index: 1;
-			}
-			.dpicn {
-			height: 42px;
-			}
-	
-			.main {
-			height: calc(100vh - 70px);
-			width: 100%;
-			overflow-y: scroll;
-			overflow-x: hidden;
-			padding: 40px 30px 30px 30px;
-			}
-	
-			.main::-webkit-scrollbar-thumb {
-			background-image:
-					linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
-			}
-			.main::-webkit-scrollbar {
-			width: 5px;
-			}
-			.main::-webkit-scrollbar-track {
-			background-color: #9e9e9eb2;
-			}
-	
-			.box-container {
-			display: flex;
-			justify-content: space-evenly;
-			align-items: center;
-			flex-wrap: wrap;
-			gap: 50px;
-			}
-			.nav {
-			min-height: 91vh;
-			width: 250px;
-			background-color: var(--background-color2);
-			position: absolute;
-			top: 0px;
-			left: 00;
-			box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825);
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			overflow: hidden;
-			padding: 30px 0 20px 10px;
-			}
-			.navcontainer {
-			height: calc(100vh - 70px);
-			width: 250px;
-			position: relative;
-			overflow-y: scroll;
-			overflow-x: hidden;
-			transition: all 0.5s ease-in-out;
-			}
-			.navcontainer::-webkit-scrollbar {
-			display: none;
-			}
-			.navclose {
-			width: 80px;
-			}
-			.nav-option {
-			width: 250px;
-			height: 60px;
-			display: flex;
-			align-items: center;
-			padding: 0 30px 0 20px;
-			gap: 20px;
-			transition: all 0.1s ease-in-out;
-			}
-			.nav-option:hover {
-			border-left: 5px solid #a2a2a2;
-			background-color: #dadada;
-			cursor: pointer;
-			}
-			.nav-img {
-			height: 30px;
-			}
-	
-			.nav-upper-options {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 30px;
-			}
-	
-			.option1 {
-			border-left: 5px solid #010058af;
-			background-color: var(--Border-color);
-			color: white;
-			cursor: pointer;
-			}
-			.option1:hover {
-			border-left: 5px solid #010058af;
-			background-color: var(--Border-color);
-			}
-			.box {
-			height: 130px;
-			width: 230px;
-			border-radius: 20px;
-			box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
-			padding: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			cursor: pointer;
-			transition: transform 0.3s ease-in-out;
-			}
-			.box:hover {
-			transform: scale(1.08);
-			}
+ @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+:root {
+	--background-color1: #fafaff;
+--background-color2: #274C77;
+--background-color3: #ededed;
+--background-color4: #F0F7EE;
+--primary-color: #000000;
+--secondary-color: #0c007d;
+--Border-color: #aebef5;
+--one-use-color: #000000;
+--two-use-color: #000000;
+}
+body {
+background-color: var(--background-color4);
+max-width: 100%;
+overflow-x: hidden;
+
+}
+
+header {
+height: 70px;
+width: 100vw;
+padding: 0 30px;
+background-color: var(--background-color1);
+position: fixed;
+z-index: 100;
+box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 27px;
+font-weight: 600;
+color: rgb(25, 47, 114);
+}
+
+.icn {
+height: 30px;
+}
+.menuicn {
+cursor: pointer;
+}
+
+.searchbar,
+.message,
+.logosec {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.searchbar2 {
+display: none;
+}
+
+.logosec {
+gap: 60px;
+}
+
+.searchbar input {
+width: 250px;
+height: 42px;
+border-radius: 50px 0 0 50px;
+background-color: var(--background-color3);
+padding: 0 20px;
+font-size: 15px;
+outline: none;
+border: none;
+}
+.searchbtn {
+width: 50px;
+height: 42px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 0px 50px 50px 0px;
+background-color: var(--secondary-color);
+cursor: pointer;
+}
+
+.message {
+gap: 40px;
+position: relative;
+cursor: pointer;
+}
+.circle {
+height: 7px;
+width: 7px;
+position: absolute;
+background-color: #fa7bb4;
+border-radius: 50%;
+left: 19px;
+top: 8px;
+}
+.dp {
+height: 40px;
+width: 40px;
+background-color: #626262;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+.main-container {
+	display: flex;
+width: 100vw;
+position: relative;
+top: 70px;
+z-index: 1;
+    }
+.dpicn {
+height: 42px;
+}
+
+.nav-option a {
+	text-decoration: none;
+	color: rgb(238, 225, 225);
+  }
+  
+.main {
+height: calc(100vh - 70px);
+width: 100%;
+overflow-y: scroll;
+overflow-x: hidden;
+padding: 40px 30px 30px 30px;
+}
+
+.main::-webkit-scrollbar-thumb {
+background-image:
+		linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+}
+.main::-webkit-scrollbar {
+width: 5px;
+}
+.main::-webkit-scrollbar-track {
+background-color: #9e9e9eb2;
+}
+
+.box-container {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap;
+gap: 50px;
+}
+.nav {
+min-height: 91vh;
+width: 250px;
+background-color: var(--background-color2);
+position: absolute;
+top: 0px;
+left: 00;
+box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+overflow: hidden;
+padding: 30px 0 20px 10px;
+}
+.navcontainer {
+height: calc(100vh - 70px);
+width: 200px;
+position: relative;
+overflow-y: scroll;
+overflow-x: hidden;
+transition: all 0.5s ease-in-out;
+}
+.navcontainer::-webkit-scrollbar {
+display: none;
+}
+.navclose {
+width: 80px;
+}
+.nav-option {
+width: 250px;
+height: 60px;
+display: flex;
+align-items: center;
+padding: 0 30px 0 20px;
+gap: 20px;
+transition: all 0.1s ease-in-out;
+}
+.nav-option:hover {
+border-left: 5px solid #a2a2a2;
+background-color: #dadada;
+cursor: pointer;
+}
+.nav-img {
+height: 30px;
+}
+
+.nav-upper-options {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+}
+
+.option1 {
+border-left: 5px solid white;
+background-color: var(--Border-color);
+color: white;
+cursor: pointer;
+}
+.option1:hover {
+border-left: 5px solid #010058af;
+background-color: var(--Border-color);
+}
+.box {
+height: 130px;
+width: 230px;
+border-radius: 20px;
+box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+cursor: pointer;
+transition: transform 0.3s ease-in-out;
+}
+.box:hover {
+transform: scale(1.08);
+}
 	
 			.box:nth-child(1) {
 			background-color: var(--one-use-color);
@@ -274,7 +279,7 @@
 			}
 	
 			.report-container {
-			min-height: 300px;
+			min-height: 500px;
 			max-width: 1200px;
 			margin: 70px auto 0px auto;
 			background-color: #ffffff;
@@ -291,6 +296,10 @@
 			padding: 20px 20px 10px 20px;
 			border-bottom: 2px solid rgba(35, 35, 35, 0.59);
 			}
+			.report-header.setting-toggle-box {
+    border-bottom: none;
+}
+
 	
 			.recent-Articles {
 			font-size: 30px;
@@ -365,10 +374,25 @@
 				text-align: center;
 				font-weight: bold;
 			}
-
 			.calibrate-button {
-				margin-top: 10px;
-			}
+        background-color: #007BBD; /* Blue background color */
+		display: flex;
+ 	 	justify-content: center;
+  		align-items: center;
+        color: #FFFFFF; /* White text color */
+        padding: 15px 30px; /* Increased padding for larger button size */
+        font-size: 18px; /* Increased font size */
+        border: none;
+        cursor: pointer;
+        border-radius: 10px; /* Rounded square shape */
+		
+    }
+	.arduino-calibrate-div {
+        text-align: center;
+    }
+	
+	
+</style>
 		</style>
 		<style>
 			/* Responsive CSS Here */
@@ -532,7 +556,22 @@
 					width: 180px;
 				}
 				}
-				
+				.centered-form {
+  					display: flex;
+  					flex-direction: column;
+ 					align-items: center;
+  					justify-content: center;
+  					width: 400px; /* Adjust the width as needed */
+ 					margin: 0 auto; /* Center horizontally */
+ 					margin-top: 50px; /* Adjust the top margin as needed */
+				}
+
+.inputGroup {
+  margin-bottom: 10px;
+}
+
+/* Additional styles for the form elements if needed */
+
 		</style>
 		<script>
 			function toggleSections() {
@@ -594,30 +633,54 @@
 
 			<div class="report-container">
 				<div class="report-header">
-					<h1 class="recent-Articles">Settings</h1>
-					<select id="toggle-select" onchange="toggleSections()">
-						<option value="0">Edit Profile</option>
-						<option value="1">Device</option>
-					</select>
+				  <h1 class="recent-Articles">Settings</h1>
+				  <select id="toggle-select" onchange="toggleSections()">
+					<option value="0" selected>Edit Profile</option>
+					<option value="1">Device</option>
+				  </select>
 				</div>
 				<div class="report-header setting-toggle-box">
+				  <div class="modalForm">
+					<form method="post" class="centered-form">
+					  <p class="caption">Enter corresponding details to update your profile</p>
+					  <br>
+					  <div class="inputGroup">
+						<input type="text" name="fullname" placeholder="New name" autocomplete="off" required>
+					  </div>
+					  <div class="inputGroup">
+						<input type="email" name="email" placeholder="New username" autocomplete="off" required>
+					  </div>
+					  <div class="inputGroup">
+						<input type="text" name="username" placeholder="New email" autocomplete="off" required>
+					  </div>
+					  <div class="inputGroup">
+						<input type="password" name="password" placeholder="New password" autocomplete="off" required>
+					  </div>
+					</form>
+				  </div>
 				</div>
+				
 				<div class="report-header setting-toggle-box">
-					<p class="caption-calibration">Sit upright or stand with your back on a flat surface and hold position before pressing the calibrate button.</p>
-					<div>
-						<p class="calibration-angles">Cervix angle (upper spine): min, max, avg</p>
-						<p class="calibration-angles">Thoracic angle (middle spine): min, max, avg</p>
-						<p class="calibration-angles">Lumbar angle (upper spine): min, max, avg</p>
-						<p class="calibration-angles">Left shoulder angle: min, max, avg</p>
-						<p class="calibration-angles">Right shoulder angle: min, max, avg</p>
-						<p class="calibration-angles">Left rib: min, max, avg</p>
-						<p class="calibration-angles">Right rib: min, max, avg</p>
-					</div>
+				  <p class="caption-calibration">Sit upright or stand with your back on a flat surface and hold position before pressing the calibrate button.</p>
+				  <br>
+				  <div>
+					<p class="calibration-angles">Cervix angle (upper spine): min, max, avg</p>
+					<p class="calibration-angles">Thoracic angle (middle spine): min, max, avg</p>
+					<p class="calibration-angles">Lumbar angle (upper spine): min, max, avg</p>
+					<p class="calibration-angles">Left shoulder angle: min, max, avg</p>
+					<p class="calibration-angles">Right shoulder angle: min, max, avg</p>
+					<p class="calibration-angles">Left rib: min, max, avg</p>
+					<p class="calibration-angles">Right rib: min, max, avg</p>
+				  </div>
+				  <br><br>
+				  <div style="display: flex; justify-content: center;">
 					<div id="arduino-calibrate-div">
-						<button class="calibrate-button">Calibrate</button>
+					  <button class="calibrate-button">Calibrate</button>
 					</div>
+				  </div>
 				</div>
-			</div>
+			  </div>
+			  
 		</div>
 	</div>
 
