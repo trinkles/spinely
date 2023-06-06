@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calibrate</title>
+  <link rel="stylesheet" href="css/calibrate.css">
+  <script>
+    // JavaScript code for the countdown timer
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      var intervalId = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = "Time Remaining: " + minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          clearInterval(intervalId);
+          display.textContent = "Time Up!";
+          location.href = "CalibrationResults.php";
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      var startButton = document.querySelector(".start-button");
+      var duration = 10; // Duration in seconds
+      var display = document.querySelector(".timer");
+      
+      startButton.addEventListener("click", function () {
+        startTimer(duration, display);
+        startButton.disabled = true; // Disable the button after clicking
+      });
+    };
+  </script>
+</head>
+<body>
+  <div class="center">
+    <h1>Calibrate</h1>
+  
+    <button class="start-button">Start Calibrating</button>
+  
+    <div class="timer">Time Remaining: 00:10</div>
+  
+    <div class="message">Please don't move.</div>
+  </div>
+</body>
+</html>
