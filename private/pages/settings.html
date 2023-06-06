@@ -34,7 +34,27 @@
 			--one-use-color: #000000;
 			--two-use-color: #000000;
 			}
-			body {
+			body {/* New addition, make a responsive version */
+			.setting-toggle-box {
+				display: none;
+			}
+
+			.setting-toggle-box:first-child {
+				display: block;
+			}
+
+			.caption-calibration {
+				text-align: center;
+			}
+
+			.calibration-angles {
+				text-align: center;
+				font-weight: bold;
+			}
+
+			.calibrate-button {
+				margin-top: 10px;
+			}
 			background-color: var(--background-color4);
 			max-width: 100%;
 			overflow-x: hidden;
@@ -346,6 +366,28 @@
 			background-color: rgb(0, 177, 0);
 			color: white;
 			border-radius: 4px;
+			}
+			
+			/* New addition, make a responsive version */
+			.setting-toggle-box {
+				display: none;
+			}
+
+			.setting-toggle-box:first-child {
+				display: block;
+			}
+
+			.caption-calibration {
+				text-align: center;
+			}
+
+			.calibration-angles {
+				text-align: center;
+				font-weight: bold;
+			}
+
+			.calibrate-button {
+				margin-top: 10px;
 			}
 		</style>
 		<style>
