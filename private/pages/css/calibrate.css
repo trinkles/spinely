@@ -1,0 +1,30 @@
+body {
+    background-color: #F0F7EE;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  h1 {
+    color: #274C77;
+  }
+  .start-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    border-radius: 5px;
+    background-color: #274C77;
+    color: white;
+    cursor: pointer;
+  }
+  .timer {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  .message {
+    font-size: 20px;
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
