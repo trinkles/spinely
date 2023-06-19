@@ -84,8 +84,7 @@ CREATE TABLE IF NOT EXISTS progress_report (
   date_time datetime NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 
--- OPTIONAL: spine_range table
--- Device Calibration Table
+-- OPTIONAL/LEGACY: spine_range table
 CREATE TABLE IF NOT EXISTS spine_range (
     spineID INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
     userID INT(11) UNIQUE KEY NOT NULL,
