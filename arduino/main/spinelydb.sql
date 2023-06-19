@@ -53,8 +53,8 @@ CREATE TABLE IF NOT EXISTS sessions (
   sessionID int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   userID INT NOT NULL,
   percent_proper float(10,2) NOT NULL,
-  time_start date NOT NULL,
-  time_end date NOT NULL,
+  time_start time NOT NULL,
+  time_end time NOT NULL,
   FOREIGN KEY (userID) REFERENCES users(userID)
 );
 
