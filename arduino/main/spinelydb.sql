@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS users (
   username VARCHAR(100) NOT NULL UNIQUE KEY ,
   email VARCHAR(300) NOT NULL UNIQUE KEY,
   pass TEXT NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) 
 
 -- Device Calibration Table
 CREATE TABLE IF NOT EXISTS device_calibration (
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS device_calibration (
     right_midAxLine_angle_max FLOAT(10,2) NOT NULL,
     right_midAxLine_angle_avg FLOAT(10,2) NOT NULL,
     calibration_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 -- Monitoring Table
 CREATE TABLE IF NOT EXISTS monitoring (
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS monitoring (
   rightmidAx FLOAT(10,2) NOT NULL,
   postureStatus ENUM('proper', 'improper') NOT NULL DEFAULT 'proper',
   monitoring_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4	
+)	
 
 -- Sessions Table
 CREATE TABLE IF NOT EXISTS sessions (
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS sessions (
   percent_proper float(10,0) NOT NULL,
   time_start date NOT NULL,
   time_end date NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+)
 
 -- Sessions Angle Table
 CREATE TABLE IF NOT EXISTS session_angle_avgs (
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS session_angle_avgs (
     lumbar_avg_session FLOAT(10,2) NOT NULL,
     leftMidAx_avg_session FLOAT(10,2) NOT NULL,
     rightMidAx_avg_session FLOAT(10,2) NOT NULL,
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+)
 
 -- Progress Report Table
 CREATE TABLE IF NOT EXISTS progress_report (
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS progress_report (
   progress_proper FLOAT(10,0) NOT NULL,
   progress_improper FLOAT(10,0) NOT NULL,
   date_time datetime NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+)
 
 -- OPTIONAL/LEGACY: spine_range table
 CREATE TABLE IF NOT EXISTS spine_range (
@@ -97,4 +97,4 @@ CREATE TABLE IF NOT EXISTS spine_range (
     lumbar_angle_min FLOAT(10,2) NOT NULL,
     lumbar_angle_max FLOAT(10,2) NOT NULL,
     lumbar_angle_avg FLOAT(10,2) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
