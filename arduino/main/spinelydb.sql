@@ -38,16 +38,6 @@ CREATE TABLE IF NOT EXISTS device_calibration (
     FOREIGN KEY (userID) REFERENCES users(userID)
 );
 
--- Progress Report Table
-CREATE TABLE IF NOT EXISTS progress_report (
-  progressID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  sessionID INT NOT NULL,
-  results_proper FLOAT(10,2) NOT NULL,
-  progress_proper FLOAT(10,2) NOT NULL,
-  date_time datetime NOT NULL,
-  FOREIGN KEY (sessionID) REFERENCES sessions(sessionID),
-);
-
 -- Sessions Table
 CREATE TABLE IF NOT EXISTS sessions (
   sessionID int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -56,6 +46,16 @@ CREATE TABLE IF NOT EXISTS sessions (
   time_start time NOT NULL,
   time_end time NOT NULL,
   FOREIGN KEY (userID) REFERENCES users(userID)
+);
+
+-- Progress Report Table
+CREATE TABLE IF NOT EXISTS progress_report (
+  progressID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  sessionID INT NOT NULL,
+  results_proper FLOAT(10,2) NOT NULL,
+  progress_proper FLOAT(10,2) NOT NULL,
+  date_time datetime NOT NULL,
+  FOREIGN KEY (sessionID) REFERENCES sessions(sessionID)
 );
 
 -- Monitoring Table
@@ -69,6 +69,5 @@ CREATE TABLE IF NOT EXISTS monitoring (
   rightmidAx FLOAT(10,2) NOT NULL,
   postureStatus ENUM('proper', 'improper') NOT NULL DEFAULT 'proper',
   monitoring_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (sessionID) REFERENCES sessions(sessionID),
+  FOREIGN KEY (sessionID) REFERENCES sessions(sessionID)
 );
-
